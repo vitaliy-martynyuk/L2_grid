@@ -1,0 +1,133 @@
+html, body {
+  height: auto;
+}
+
+img {
+  float: left;
+  padding-right: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.section1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.sec1nav {
+  background-color: palevioletred;
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+
+.sec1nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: unset;
+  align-items: center;
+}
+
+.content {
+  background-color: plum;
+  height: 100%;
+}
+
+header, footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: olivedrab;
+}
+
+main > div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.section2 {
+  padding: 100px 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.section2 > div {
+  background-color: blueviolet;
+  pad: 5px;
+}
+
+.section3 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) /*1fr 1fr 1fr 1fr*/;
+  grid-template-rows: 1fr 8fr 1fr;
+  /* grid-template: "cxfsdfsdfdsf cxfsdfsdfdsf cxfsdfsdfdsf cxfsdfsdfdsf"
+                 "nav content content content"
+                 "footer footer footer footer"; */
+}
+
+.section3 .header, .section3 .footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: olivedrab;
+}
+
+.section3 .header {
+  /* grid-area: cxfsdfsdfdsf; */
+  grid-column: 1 / 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  grid-row: 1 / 2;
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
+}
+
+.section3 .contentWrapper {
+  /* grid-area: content; */
+  grid-column: 1 / 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  grid-row: 2 / 3;
+  /* grid-row-start: 2;
+  grid-row-end: 3; */
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 1fr;
+}
+
+.nav {
+  width: 100%;
+  background-color: palevioletred;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: unset;
+  align-items: center;
+}
+
+.section3 .footer {
+  /* grid-area: footer; */
+  grid-column: 1 / 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  grid-row: 3 / 4;
+  /* grid-row-start: 3;
+  grid-row-end: 4; */
+}
